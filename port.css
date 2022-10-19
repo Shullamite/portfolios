@@ -1,0 +1,263 @@
+@font-face {
+    src: url(fonts/Poppins-Light.ttf);
+    font-family: poppins-Italic;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins-Italic; 
+    text-decoration: none;
+    
+}
+body{
+    overflow-x: hidden;
+    color: aliceblue;
+}
+.main-width{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.hero{
+   width: 100%;
+   height: 100%;
+   min-height: 100vh; 
+   
+   /* background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)); */
+   background: black;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+
+}  
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 55px;
+    width: 55px;
+
+}
+nav .ham{
+    width: 35px;
+    height: 24px;
+    right: 3%;
+    top: 60px;
+    z-index: 5;
+    background: white;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+nav .ham span{
+    display: block;
+    background: rgb(212, 85, 212);
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    transition-property: transform, opacity;
+    
+}
+nav .ham span:nth-child(2){
+    margin: 7px 0px;
+}
+nav .nav-list{
+    list-style: none;
+}
+nav .nav-list li{
+    display: inline-block;
+}
+nav .nav-list li a{
+    display: inline-block;
+    color: aliceblue;
+    margin-left: 55px;
+    font-size: 15px;
+    font-weight: 600;
+}
+nav .nav-list li:not(:last-child) a:hover{
+    color: rgb(212, 85, 212);
+    transform: .4s;
+}
+nav .nav-list li.btn a{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid rgb(212, 85, 212);
+    padding: 9px 28px;
+    border-radius: 30px;
+    line-height: 1.3;
+    color: rgb(212, 85, 212);
+    font-weight: 500;
+}
+nav .nav-list li.btn:hover a{
+    background: rgb(212, 85, 212);
+    color: aliceblue;
+    border: 2px solid transparent;
+    transform: .3s;
+}
+.container{
+    padding-top: 110px; /*reduced the padding*/
+
+}
+.container .text{
+    margin-bottom: 40px;
+}
+.container .text h1{
+    color: aliceblue;
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0 20px;
+}
+span{
+    color:  rgb(212, 85, 212);
+}
+.container .text h3{
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 17px;
+}
+.container .text p{
+    width: 440px;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.container .text button{
+    background: rgb(212, 85, 212);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid rgb(212, 85, 212);
+    border-radius: 30px;
+    cursor: pointer;
+    color: aliceblue;
+}
+.container .text button:hover{
+    background: transparent;
+    border: 2px solid rgb(212, 85, 212) ;
+    color: rgb(212, 85, 212);
+    transition: .4s;
+}
+.bottom{
+    margin-top: 195px;
+    padding-bottom: 25px;
+}
+.bottom p{
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+@media screen  and (max-width: 930px){
+    nav .ham{
+        display: initial;
+
+    }
+    .click{
+        top: 46px;
+    }
+    .click span{
+        position: absolute;
+        margin-top: 120px;
+
+    }
+    .click span:first-child{
+transform: rotate(-40deg);
+    }
+    .click span :nth-child(2){
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child{
+        transform: rotate(40deg);
+        top:90px;
+        right: 0;
+        top: 0;
+
+    }
+    nav .nav-list li a{
+        opacity: 1;
+    }
+    nav .nav-list li:not(:last-child) a:hover{
+        color: black;
+    }
+    nav .nav-list li{
+        display: block;
+    }
+    nav .nav-list{
+        position: absolute;
+        top: 90px;
+        right: -65%;
+        bottom: 0px;
+        
+        width: 45%;
+        height: 83%;
+        background: linear-gradient(rgb(212, 85, 212), rgb(212, 85, 212));
+        z-index: 2;
+        padding: 6% 9%;
+        opacity: 0.9;
+        transition: .3s right;
+        border-radius: 10px;
+    }
+    nav .nav-list li.btn a{
+        display: inline-block;
+        background: transparent;
+        border: 2px solid black;
+        color: black;
+        font-weight: 500;
+    }
+    nav .nav-list li a{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    nav .nav-list li.btn a{
+        position: absolute;
+        bottom: 0%;
+        right: 20%;
+        left: 20%;
+        padding-left: 22px;
+        font-size: 14px;
+    }
+    nav .nav-list.open{
+        right: 0;
+    }
+}
+
+    
+
+
+/* .container .text h1 span{
+    position: relative;
+    overflow: hidden;
+}
+.container .text h1 span::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    height: 63px;
+    width: 100%;
+    background: black;
+    border-left: 2px solid rgb(212, 85, 212);
+    animation: typing 3.0s steps(30) 5;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 35px;
+    }
+}
+.container .dynamic-text span{
+    background: red;
+} */
